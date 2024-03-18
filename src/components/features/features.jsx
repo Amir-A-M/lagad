@@ -2,14 +2,11 @@
 
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "../ui/card";
 import Image from "next/image";
-import { LazyMotion, domAnimation, m } from "framer-motion";
-import { Skeleton } from "../ui/skeleton";
 
 const items = [
   {
@@ -140,71 +137,5 @@ export function Item({ title, description, image, i }) {
         </CardDescription>
       </CardHeader>
     </Card>
-  );
-}
-
-function SkeletonFive() {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
-  return (
-    <LazyMotion features={domAnimation} strict>
-      <m.div
-        initial="initial"
-        whileHover="animate"
-        className="flex flex-1 w-full h-full min-h-[6rem] flex-col space-y-2"
-      >
-        <m.div
-          variants={variants}
-          className="flex flex-row rounded-2xl border border-neutral-200 dark:border-white/[0.3] 
-          p-2 items-start space-x-2 rtl:space-x-reverse bg-background"
-        >
-          <Image
-            src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-            unoptimized
-            alt="avatar"
-            height="100"
-            width="100"
-            className="rounded-full h-10 w-10"
-          />
-          <div className="space-y-2 mt-1 w-full">
-            <Skeleton className="h-3" />
-            <Skeleton className="h-3 w-1/2" />
-          </div>
-        </m.div>
-        <m.div
-          variants={variantsSecond}
-          className="flex flex-row rounded-full border border-neutral-200 dark:border-white/[0.3] 
-          p-2 items-center justify-end space-x-2 rtl:space-x-reverse w-3/4 ms-auto bg-background"
-        >
-          <div className="w-1/2">
-            <Skeleton className="h-3" />
-          </div>
-          <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        </m.div>
-      </m.div>
-    </LazyMotion>
   );
 }

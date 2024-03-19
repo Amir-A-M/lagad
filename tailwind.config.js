@@ -88,7 +88,11 @@ module.exports = {
     fontSize: false,
   },
   plugins: [
-    require('tailwindcss-fluid-type'),
+    require('tailwindcss-fluid-type')({
+      values: {
+        'xss': [-3, 1.6],
+      },
+    }),
     require("tailwindcss-animate"),
     addVariablesForColors
   ],
@@ -100,7 +104,7 @@ function addVariablesForColors({ addBase, theme }) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

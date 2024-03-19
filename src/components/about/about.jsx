@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
+import { ArrowLink, Button } from "../ui/button";
 import Link from "next/link";
 import { ChevronLeftIcon } from "@radix-ui/react-icons";
 
 export default function About() {
   return (
-    <section className="container px-0 lg:px-14 my-32 grid md:grid-cols-2 items-center gap-12">
+    <section className="container px-6 lg:px-14 my-32 grid md:grid-cols-2 items-center gap-12">
       <div>
         <Image
           className="rounded-lg"
@@ -19,7 +19,7 @@ export default function About() {
       </div>
       <div className="px-6 md:px-0">
         <p className="text-sm font-light">ما کیستیم؟</p>
-        <h2 className="text-2xl text-balance font-bold mt-2">
+        <h2 className="text-2xl text-balance font-bold mt-2 leading-normal">
           توانمند کننده سازندگان برای زنده کردن ایده هایشان
         </h2>
         <p className="text-sm font-light text-balance mt-5">
@@ -33,12 +33,7 @@ export default function About() {
           <Button asChild variant="outline">
             <Link href="/about">بیشتر بدانید</Link>
           </Button>
-          <Button asChild variant="link">
-            <Link href="/signup" className="text-foreground group">
-              ثبت نام
-              <ChevronLeftIcon className="h-4 w-4 ms-2 transition-transform relative group-hover:-translate-x-1" />
-            </Link>
-          </Button>
+          <ArrowLink href="/signup">ثبت نام</ArrowLink>
         </div>
       </div>
     </section>

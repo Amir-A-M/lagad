@@ -22,3 +22,12 @@ export const getRandomColor = () => {
 
 export const random = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
+
+const initialsRgx = new RegExp(/(\p{L}{1})\p{L}+/, 'gu');
+export const getInitials = (name) => {
+  let initials = [...name.matchAll(initialsRgx)] || [];
+
+  return (
+    (initials.shift()?.[1] || '') + (initials.pop()?.[1] || '')
+  ).toUpperCase();
+}

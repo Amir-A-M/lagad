@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/header/header';
 import DirProvider from '@/components/direction-provider';
+import { Toaster } from "@/components/ui/toaster"
 
 const Estedad = localFont({ src: '../fonts/Estedad-FD[KSHD,wght].ttf' })
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           >
             <Header />
             {children}
+            <Toaster />
           </ThemeProvider>
         </DirProvider>
       </body>

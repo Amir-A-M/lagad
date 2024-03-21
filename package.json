@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-direction": "^1.0.1",
@@ -17,6 +18,7 @@
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -28,7 +30,9 @@
     "recharts": "^2.12.2",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-fluid-type": "github:Amir-A-M/tailwindcss-fluid-type#patch-1"
+    "tailwindcss-fluid-type": "github:Amir-A-M/tailwindcss-fluid-type#patch-1",
+    "yup": "^1.4.0",
+    "yup-locale-fa": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

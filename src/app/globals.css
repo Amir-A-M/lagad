@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 99%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -24,10 +24,15 @@
     --input: 240 5.9% 90%;
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
+
+    --warning: 48, 100%, 96%;
+    --warning-foreground: 26, 90%, 37%;
+    --info: 204, 100%, 97%;
+    --info-foreground: 192, 91%, 36%;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
+    --background: 20 14.3% 5%;
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -46,6 +51,11 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
+
+    --warning: 21, 92%, 8%;
+    --warning-foreground: 48, 100%, 96%;
+    --info: 202, 89%, 8%;
+    --info-foreground: 204, 100%, 96%;
   }
 }
 
@@ -60,6 +70,10 @@
 
   ::selection {
     background-color: hsl(var(--primary-foreground));
+  }
+
+  .dark ::selection {
+    background-color: hsl(var(--secondary));
   }
 }
 

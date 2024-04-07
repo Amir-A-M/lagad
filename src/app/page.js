@@ -6,18 +6,22 @@ import { Features } from "@/components/features/features";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import FeaturedProjects from "@/components/projects/featured-projects";
+import Header from '@/components/header/header';
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Features />
-      <About />
-      <FeaturedProjects />
-      <FeaturedPosts />
-      <FAQ />
-      <NewsletterBanner />
-      <Footer />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Features />
+        <About />
+        <FeaturedProjects />
+        <FeaturedPosts />
+        <FAQ />
+        <NewsletterBanner />
+        <Footer />
+      </main>
+    </>
   );
 }

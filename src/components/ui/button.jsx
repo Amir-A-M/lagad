@@ -50,13 +50,21 @@ const Button = React.forwardRef(
 );
 Button.displayName = "Button";
 
-function ArrowLink({ children, href, className }) {
+function ArrowLink({
+  children,
+  className,
+  variant = "link",
+  Tag = Link,
+  ...rest
+}) {
+  const tagClass = variant === "link" ? '' : 'pe-3'
+  const iconClass = variant === "link" ? 'ms-2' : 'ms-1'
   return (
-    <Button asChild variant="link">
-      <Link href={href} className={cn("text-foreground group", className)}>
+    <Button asChild variant={variant}>
+      <Tag className={cn("text-foreground group", tagClass, className)} {...rest}>
         {children}
-        <ChevronLeftIcon className="h-4 w-4 ms-2 transition-transform relative group-hover:-translate-x-1" />
-      </Link>
+        <ChevronLeftIcon className={`h-4 w-4 ${iconClass} transition-transform relative group-hover:-translate-x-1 group-focus:translate-x-0`} />
+      </Tag>
     </Button>
   );
 }

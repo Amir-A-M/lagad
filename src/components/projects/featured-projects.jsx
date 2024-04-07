@@ -58,7 +58,7 @@ export default function FeaturedProjects() {
           />
           <h1 className="text-xl font-semibold">ثبت پروژه...</h1>
           <p className="my-3">با ساخت یک حساب لگد شروع کنید.</p>
-          <ArrowLink href="signup" className="!p-0 text-xs font-light">
+          <ArrowLink href="/auth/login" className="!p-0 text-xs font-light">
             ادامه
           </ArrowLink>
         </article>

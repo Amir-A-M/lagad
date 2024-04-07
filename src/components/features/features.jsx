@@ -107,7 +107,7 @@ const items = [
 export function Features() {
   return (
     <section
-      className="container relative z-10 space-y-4 sm:columns-2 md:columns-3 xl:columns-4 sm:-skew-x-6 sm:-skew-y-6 sm:ps-16 gap-x-6
+      className="container relative z-10 space-y-4 sm:columns-2 md:columns-3 xl:columns-4 sm:skew-x-6 sm:skew-y-6 sm:ps-16 gap-x-6
     pointer-events-none"
     >
       {items.map(({ title, description, image }, i) => (
@@ -126,7 +126,7 @@ export function Features() {
 export function Item({ title, description, image, i }) {
   return (
     <Card
-      className="backdrop-blur-sm bg-white bg-opacity-5 [&>*>*]:pointer-events-auto sm:skew-x-6 sm:skew-y-6"
+      className="backdrop-blur-sm bg-white bg-opacity-5 [&>*>*]:pointer-events-auto sm:-skew-x-6 sm:-skew-y-6"
       style={{ breakInside: "avoid" }}
     >
       <CardHeader>

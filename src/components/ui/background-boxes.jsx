@@ -20,7 +20,7 @@ export const BoxesCore = ({ className, ...rest }) => {
     <LazyMotion features={domAnimation} strict>
       <div
         style={{
-          transform: `translate(-40%, 10%) skewX(-56deg) skewY(15deg) scale(.8) rotate(0deg) translateZ(0px)`,
+          transform: `translate(0%, 10%) skewX(-56deg) skewY(15deg) scale(.8) rotate(0deg) translateZ(0px)`,
         }}
         className={cn(
           "absolute top-0 left-0 p-4 w-fit h-full z-0 hidden lg:flex",

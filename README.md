@@ -1,3 +1,25 @@
+# In case I forget!
+- Prerequisites: make sure to have node, git, WSL, and then docker installed
+- add ENV Vars
+- setup DB: npm run migrate
+- Start DB: Start Docker. simply in VS Code right click on docker-compose.yml and click compose up (you may need to install docker plugin)
+- start Dev Server: npm run dev
+
+## ENV Vars
+BASE_URL="http://localhost:3000"
+
+DATABASE_URL
+
+MAIL_HOST
+MAIL_USER
+MAIL_PASS
+
+GITHUB_CLIENT_ID
+GITHUB_CLIENT_SECRET
+
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

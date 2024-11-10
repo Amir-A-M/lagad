@@ -5,20 +5,25 @@
 - Start DB: Start Docker. simply in VS Code right click on docker-compose.yml and click compose up (you may need to install docker plugin)
 - start Dev Server: npm run dev
 
-## ENV Vars
+## sample ENV Vars
+```
 BASE_URL="http://localhost:3000"
 
-DATABASE_URL
+DATABASE_URL="postgresql://DB_User:Pass@localhost:5432/DB_Name?schema=public"
+POSTGRES_DB=DB_Name
+POSTGRES_USER=DB_User
+POSTGRES_PASSWORD=Pass
 
-MAIL_HOST
-MAIL_USER
-MAIL_PASS
+MAIL_HOST="mail.site.com"
+MAIL_USER="lagad@site.com"
+MAIL_PASS="2iE2wpMNb8En5quez8"
 
-GITHUB_CLIENT_ID
-GITHUB_CLIENT_SECRET
+GITHUB_CLIENT_ID="95ac70387d6f60557d78"
+GITHUB_CLIENT_SECRET="0ecc00071776b0dc7c77a093805702dfa5ce1ad5"
 
-GOOGLE_CLIENT_ID
-GOOGLE_CLIENT_SECRET
+GOOGLE_CLIENT_ID="359707553204-td6vcs3fk3v8snp5mrsmho4u30hvh3vi.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="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"
+```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
